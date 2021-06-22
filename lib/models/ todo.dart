@@ -1,4 +1,5 @@
 class ToDo {
   final String description;
-  ToDo({this.description});
+  bool done;
+  ToDo({this.description, this.done = false});
 }

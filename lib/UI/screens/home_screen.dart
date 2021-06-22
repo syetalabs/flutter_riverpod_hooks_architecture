@@ -15,15 +15,17 @@ class MyHomePage extends HookWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '${_counter.state}',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            ListTile(
+              leading: Checkbox(
+                value: false,
+                onChanged: (value) {
+                  _counter.state++;
+                },
+              ),
+              title: Text('Todo Title'),
+            )
           ],
         ),
       ),
