@@ -12,4 +12,9 @@ class ToDoList extends ChangeNotifier {
     todoList.elementAt(index).done = !todoList.elementAt(index).done;
     notifyListeners();
   }
+
+  addTodo(ToDo todo) {
+    todoList.add(todo);
+    notifyListeners();
+  }
 }

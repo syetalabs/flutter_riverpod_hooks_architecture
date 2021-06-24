@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:starterpp/UI/widgets/input_dialog.dart';
 import 'package:starterpp/models/%20todo.dart';
 import 'package:starterpp/providers/todo_list.dart';
 
@@ -43,10 +44,7 @@ class MyHomePage extends HookWidget {
           showDialog(
               context: context,
               builder: (BuildContext context) {
-                return AlertDialog(
-                  title: TextField(),
-                  content: Text("Hello World"),
-                );
+                return InputDialog();
               });
         },
         tooltip: 'Increment',
